@@ -1,0 +1,22 @@
+.navbar{
+    background-color: #ea021a;
+}
+
+.main{
+    background-color:	#DCDCDC;
+}
+
+footer{
+    background-color: #B0B0B0;
+}
+
+#prijava{
+    width: 500px;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.card-img-overlay{
+    margin-top: 260px;
+}
+

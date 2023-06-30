@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>SPORTSKE NOVOSTI</title>
+</head>
+<body>
+    <div class="main text-center">
+      <!-- Navigacijska traka -->
+      <nav class="navbar">
+          <div class="container">
+              <a class="navbar-brand " href="index.html"><img class="mx-3" width="80px" height="80px" src="/images/logo.png">
+              </img>
+              <span class="fs-2 fw-bold text-white ">Sportske novosti</span>
+              </a>
+              <a class="button text-white fs-6 badge text-decoration-none" href="prijava.html">Prijava</a>
+            </form>
+          </div>
+      </nav>
+      
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Naslovnica</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="nogomet.html">Nogomet</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="kosarka.html">Košarka</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="tenis.html">Tenis</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="googleMaps.html">Google Maps</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+      <!-- PRIJAVA -->
+      <div id="prijava">
+        <form class="p-5">
+            <h1>Prijava</h1>
+            <hr>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label border-primary">Email</label>
+              <input type="email" class="form-control" id="emailAdresa" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Lozinka</label>
+              <input type="password" class="form-control" id="lozinka">
+            </div>
+            <button type="submit" class="btn btn-primary"
+            id="prijavaBtn">Prijava</button>
+          </form>
+      </div>
+
+      <!-- Podnožje (footer) -->
+      <footer>
+        <div class="text-center pb-4">
+            <hr>
+            <p>Marko Benković © 2023</p>
+                <a class="me-3" href="https://www.facebook.com/fpmoz.ba/" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+                <a class="me-3" href="https://twitter.com/SVE_Mostar" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                <a class="me-3" href="https://www.instagram.com/fpmoz.mostar/?hl=hr" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+                <a href="https://www.youtube.com/watch?v=VS_WbUBkB88" target="_blank"><i class="fa fa-youtube fa-2x"></i></a>  
+        </div>
+      </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</div>
+
+<script>
+    const email = document.getElementById('emailAdresa'); //dohvaćanje elementa po id-u
+    const lozinka = document.getElementById('lozinka'); //dohvaćanje elementa po id-u
+
+    // dodavanje funkcije za klik na gumb prijavaBtn, na klik se dohvaćaju email i lozinka te ako su input polja prazna pokrece se alert sa porukom "Unesite sva polja!!" . Ukoliko to nije slucaj onda alert daje poruku "Uspješno ste se prijavili!" i u konzolu ispisuje vrijednosti emaila i lozinke.
+    prijavaBtn.addEventListener("click", () => {
+        if (email.value === "" || lozinka.value === "") {
+          alert("Unesite sva polja!!");
+        } else {
+          alert("Uspješno ste se prijavili!");
+          console.log("Email:" + email.value, "Lozinka:" + lozinka.value);
+        }
+      });
+</script>
+
+</body>
+</html>
+
